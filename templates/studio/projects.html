@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- ============================================================================
+FILE: projects.html  |  EDITABLE WEBSITE MARKUP
+============================================================================ -->
+<html lang="en">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projects — Northline Build Co.</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header><a class="logo" href="index.html">NORTHLINE<span>BUILD CO.</span></a>
+      <nav><a href="services.html">Services</a><a class="active" href="projects.html">Projects</a><a href="contact.html">Contact</a>
+      </nav><a class="call" href="tel:+420777123456">Call us <b>↗</b></a>
+    </header>
+    <main class="projects">
+      <div class="projects-head">
+        <p class="tag">02 / SELECTED PROJECTS</p>
+        <h1>Work you can<br><em>stand in.</em>
+        </h1>
+        <p>Click a project to take a closer look.</p>
+      </div>
+      <div class="project-grid">
+        <button class="project project-one" data-image="images/renovation.png"><span>01 / HILLSIDE HOUSE</span><b>Full renovation ↗</b>
+        </button>
+        <button class="project project-two" data-image="images/kitchen.png"><span>02 / VINOHRADY KITCHEN</span><b>Interior fit-out ↗</b>
+        </button>
+      </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+      <button id="close" aria-label="Close image">×</button><img id="largeImage" alt="Completed Northline project">
+    </div>
+    <footer><a class="logo" href="index.html">NORTHLINE<span>BUILD CO.</span></a>
+      <p>Prague · Czech Republic</p>
+      <p>© 2026</p>
+    </footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

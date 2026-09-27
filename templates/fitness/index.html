@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- ============================================================================
+FILE: index.html  |  EDITABLE WEBSITE MARKUP
+============================================================================ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Better — Personal coaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav"><a class="logo" href="#home">MOVE<br /><i>BETTER</i></a>
+      <nav><a href="#coach">Coaching</a><a href="#gallery">Training</a><a href="#pricing">Pricing</a>
+      </nav><a class="nav-button" href="#contact">Start today <b>↗</b></a>
+    </header>
+    <main>
+      <!-- ============================================================================ -->
+      <!-- SECTION: HOME -->
+      <!-- ============================================================================ -->
+      <section class="hero" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Strength coaching · Prague</p>
+          <h1>Feel strong.<br /><em>Move free.</em>
+          </h1>
+          <p>Practical strength coaching for people who want a body that makes everyday life feel better.</p><a class="button magnetic" href="#pricing">See coaching options <b>↓</b></a>
+          <div class="metrics"><span><b>1:1</b> Personal plans</span><span><b>100%</b> Your pace</span>
+          </div>
+        </div>
+        <div class="hero-image"><img src="images/coach.png" alt="Personal trainer in a gym" />
+        <div class="hero-ring">
+        </div>
+        <p>BUILD<br />YOUR<br />BASE</p>
+      </div>
+    </section>
+    <!-- ============================================================================ -->
+    <!-- SECTION: COACH -->
+    <!-- ============================================================================ -->
+    <section class="statement" id="coach">
+      <p>Training that fits<br />your <em>actual life.</em>
+      </p><span>NO FADS · NO SHOUTING · JUST PROGRESS</span>
+    </section>
+    <!-- ============================================================================ -->
+    <!-- SECTION: SERVICES SECTION -->
+    <!-- ============================================================================ -->
+    <section class="services section">
+      <div class="heading reveal">
+        <p class="eyebrow">01 / COACHING</p>
+        <h2>A plan that<br /><em>meets you there.</em>
+        </h2>
+      </div>
+      <div class="service-grid">
+        <article class="reveal"><span>01</span>
+          <h3>Personal training</h3>
+          <p>Focused sessions that build strength, confidence and momentum.</p>
+        </article>
+        <article class="reveal"><span>02</span>
+          <h3>Nutrition support</h3>
+          <p>Simple food guidance that works with your habits and your schedule.</p>
+        </article>
+        <article class="reveal"><span>03</span>
+          <h3>Online coaching</h3>
+          <p>Training plans, check-ins and accountability wherever you are.</p>
+        </article>
+      </div>
+    </section>
+    <!-- ============================================================================ -->
+    <!-- SECTION: GALLERY -->
+    <!-- ============================================================================ -->
+    <section class="gallery section" id="gallery">
+      <div class="heading reveal">
+        <p class="eyebrow">02 / IN MOTION</p>
+        <h2>Real work.<br /><em>Real change.</em>
+        </h2>
+      </div>
+      <div class="photo-grid reveal">
+        <button class="photo portrait" data-image="images/coach.png"><img src="images/coach.png" alt="Coach holding a kettlebell" /><span>01 / BUILD STRENGTH</span>
+        </button>
+        <button class="photo wide" data-image="images/session.png"><img src="images/session.png" alt="Personal training session" /><span>02 / MOVE WITH PURPOSE</span>
+        </button>
+      </div>
+    </section>
+    <!-- ============================================================================ -->
+    <!-- SECTION: PRICING -->
+    <!-- ============================================================================ -->
+    <section class="pricing section" id="pricing">
+      <div class="heading reveal">
+        <p class="eyebrow">03 / OPTIONS</p>
+        <h2>Invest in<br /><em>feeling capable.</em>
+        </h2>
+      </div>
+      <div class="price-grid">
+        <article class="reveal">
+          <p class="plan">SINGLE SESSION</p>
+          <h3>One strong start</h3>
+          <p class="price">€45 <small>/ session</small>
+          </p>
+          <ul>
+            <li>60-minute personal session</li>
+            <li>Movement assessment</li>
+            <li>Post-session notes</li>
+          </ul><a href="#contact" data-plan="Personal training">Book a session <b>↗</b></a>
+        </article>
+        <article class="featured reveal">
+          <p class="plan">MONTHLY COACHING</p>
+          <h3>Your steady plan</h3>
+          <p class="price">€160 <small>/ month</small>
+          </p>
+          <ul>
+            <li>4 personal sessions</li>
+            <li>Custom training plan</li>
+            <li>Weekly support check-in</li>
+            <li>Progress tracking</li>
+          </ul><a href="#contact" data-plan="Monthly coaching">Choose coaching <b>↗</b></a>
+        </article>
+        <article class="reveal">
+          <p class="plan">NUTRITION SUPPORT</p>
+          <h3>Food made simple</h3>
+          <p class="price">€85 <small>/ month</small>
+          </p>
+          <ul>
+            <li>Personal nutrition guide</li>
+            <li>Weekly food feedback</li>
+            <li>Habit-based approach</li>
+          </ul><a href="#contact" data-plan="Nutrition support">Get support <b>↗</b></a>
+        </article>
+      </div>
+    </section>
+    <!-- ============================================================================ -->
+    <!-- SECTION: CONTACT -->
+    <!-- ============================================================================ -->
+    <section class="contact" id="contact">
+      <div>
+        <p class="eyebrow">04 / LET'S GO</p>
+        <h2>Ready to feel<br /><em>like yourself?</em>
+        </h2>
+        <p>Send a short note and I’ll get back to you within two working days.</p>
+      </div>
+      <form id="contactForm"><label>Name<input name="name" required placeholder="Your name" /></label><label>Email<input name="email" type="email" required placeholder="you@email.com" /></label><label>What are you after?<select name="goal"><option>Personal training</option><option>Monthly coaching</option><option>Nutrition support</option><option>Online coaching</option></select></label>
+        <button class="button" type="submit">Send enquiry <b>↗</b>
+        </button>
+        <p id="status">
+        </p>
+      </form>
+    </section>
+  </main>
+  <div class="lightbox" id="lightbox">
+    <button id="close" aria-label="Close photo">×</button><img id="largeImage" alt="Fitness coaching" />
+  </div>
+  <footer><a class="logo" href="#home">MOVE<br /><i>BETTER</i></a>
+    <p>© 2026 Move Better Coaching</p><a href="#contact">hello@movebetter.co ↗</a>
+  </footer>
+  <script src="script.js">
+  </script>
+</body>
+</html>
