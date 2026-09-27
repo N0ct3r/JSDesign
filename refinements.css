@@ -3640,3 +3640,227 @@ html.is-section-settling {
   border-color: rgba(179, 201, 255, .52);
   box-shadow: 0 20px 44px rgba(0, 0, 0, .24), 0 0 0 1px rgba(101, 221, 234, .08);
 }
+
+/* =========================================================
+   MOBILE LAYOUT AND NAVIGATION
+   Keeps both language versions centred, touch-friendly and easy to browse.
+   ========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (max-width: 800px) {
+  body {
+    min-width: 320px;
+    overscroll-behavior-x: none;
+  }
+
+  .nav {
+    height: 66px;
+    padding: 0 max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left));
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .brand span {
+    font-size: 10px;
+  }
+
+  .language-switch {
+    margin-left: auto;
+    margin-right: 2px;
+  }
+
+  .menu {
+    display: grid;
+    place-content: center;
+    width: 42px;
+    height: 42px;
+    gap: 6px;
+    padding: 0;
+    border: 1px solid rgba(205, 204, 255, .18);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .045);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu span {
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    transform-origin: center;
+    transition: transform .28s cubic-bezier(.22, 1, .36, 1), opacity .2s ease;
+  }
+
+  .nav.is-menu-open .menu span:first-child {
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .nav.is-menu-open .menu span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  .nav nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 12px;
+    left: 12px;
+    display: grid;
+    gap: 0;
+    padding: 8px;
+    border: 1px solid rgba(205, 204, 255, .20);
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(20, 21, 36, .98), rgba(10, 11, 18, .98));
+    box-shadow: 0 20px 44px rgba(0, 0, 0, .34);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px) scale(.985);
+    transform-origin: top center;
+    transition: opacity .22s ease, transform .3s cubic-bezier(.22, 1, .36, 1), visibility .3s;
+  }
+
+  .nav.is-menu-open nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  .nav nav a {
+    padding: 13px 14px;
+    border-radius: 10px;
+    color: #e7e8f3;
+    font-size: 14px;
+  }
+
+  .nav nav a:hover,
+  .nav nav a:focus-visible,
+  .nav nav a:active {
+    background: rgba(151, 120, 255, .14);
+    color: #fff;
+    outline: none;
+  }
+
+  .nav nav a::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 62px;
+    gap: 26px;
+  }
+
+  .hero-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(38px, 11.5vw, 52px);
+    line-height: .96;
+  }
+
+  .hero-copy > p {
+    max-width: 33rem;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-visual {
+    width: min(100%, 520px);
+    height: clamp(300px, 82vw, 390px);
+    margin: 0 auto;
+  }
+
+  .section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .heading h2,
+  .process h2,
+  .contact h2,
+  .about-copy h2 {
+    font-size: clamp(34px, 10vw, 46px);
+    line-height: 1;
+  }
+
+  .template-grid {
+    gap: 30px;
+  }
+
+  #services .services {
+    gap: 12px;
+  }
+
+  #services .services article {
+    min-height: 260px;
+    padding: 20px;
+  }
+
+  .pricing-grid {
+    margin-top: 38px;
+    gap: 16px;
+  }
+
+  .price-card {
+    min-height: 0;
+  }
+
+  .process {
+    gap: 42px;
+  }
+
+  .process-art {
+    height: min(78vw, 360px);
+  }
+
+  .process-copy li {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand span {
+    display: none;
+  }
+
+  .wrap {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(37px, 12vw, 48px);
+  }
+
+  .template-content {
+    height: 250px;
+  }
+
+  #services .services {
+    grid-template-columns: 1fr;
+  }
+
+  #services .services article {
+    min-height: 220px;
+  }
+
+  .contact-inner {
+    padding-top: 76px;
+  }
+}

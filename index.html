@@ -5,7 +5,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <!-- Search engine and social sharing metadata -->
     <meta name="description" content="Custom website design for small businesses. JS Web Designer creates fast, modern, responsive websites built to stand out and turn visitors into enquiries." />
     <meta name="robots" content="index, follow" />
@@ -71,7 +71,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
       WEB DESIGNER
       </span>
       </a>
-      <nav>
+      <nav id="site-navigation">
         <a href="#about">About</a>
         <a href="#templates">Examples</a>
         <a href="#services">Services</a>
@@ -89,7 +89,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
       ↗
       </i>
       </a>
-      <button class="menu" aria-label="Open navigation">
+      <button class="menu" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">
         <span>
         </span>
         <span>

@@ -5,7 +5,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <!-- Search engine and social sharing metadata -->
     <meta name="description" content="Weby na míru pro malé firmy. JS Web Designer vytváří rychlé, moderní a responzivní weby, které pomáhají podnikům lépe komunikovat se zákazníky." />
     <meta name="robots" content="index, follow" />
@@ -71,7 +71,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
       WEB DESIGNER
       </span>
       </a>
-      <nav>
+      <nav id="site-navigation">
         <a href="#about">O mně</a>
         <a href="#templates">Ukázky</a>
         <a href="#services">Služby</a>
@@ -89,7 +89,7 @@ FILE: index.html  |  EDITABLE WEBSITE MARKUP
       ↗
       </i>
       </a>
-      <button class="menu" aria-label="Otevřít navigaci">
+      <button class="menu" type="button" aria-label="Otevřít navigaci" aria-controls="site-navigation" aria-expanded="false">
         <span>
         </span>
         <span>

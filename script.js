@@ -4,6 +4,44 @@
 
 /* Navigation */
 const nav = document.querySelector('.nav');
+const menuButton = document.querySelector('.menu');
+const primaryNavigation = document.querySelector('#site-navigation');
+
+/* Mobile navigation: a compact, keyboard-accessible menu on small screens. */
+function setMobileNavigation(open) {
+  if (!menuButton || !primaryNavigation) return;
+
+  nav.classList.toggle('is-menu-open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute(
+    'aria-label',
+    open
+      ? document.documentElement.lang === 'cs' ? 'Zavřít navigaci' : 'Close navigation'
+      : document.documentElement.lang === 'cs' ? 'Otevřít navigaci' : 'Open navigation',
+  );
+}
+
+menuButton?.addEventListener('click', () => {
+  setMobileNavigation(!nav.classList.contains('is-menu-open'));
+});
+
+primaryNavigation?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMobileNavigation(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMobileNavigation(false);
+});
+
+document.addEventListener('pointerdown', (event) => {
+  if (nav.classList.contains('is-menu-open') && !nav.contains(event.target)) {
+    setMobileNavigation(false);
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 800) setMobileNavigation(false);
+});
 
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 18);
